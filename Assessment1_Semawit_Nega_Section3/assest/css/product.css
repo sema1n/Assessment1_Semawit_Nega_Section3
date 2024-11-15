@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&family=New+Amsterdam&display=swap');
+
+/* General font styling */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:lightgray;
+}
+
+h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ;
+     color:rgb(119, 104, 104);
+}
+
+header {
+    background-color:silver  ;
+    padding: 15px;
+    text-align: center;
+    color:rgb(119, 104, 104);
+}
+
+main {
+    background-color: transparent;
+    margin: 20px;
+    padding: 15px;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 10px 0;
+    justify-content: center;
+    
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    padding: 8px 17px;
+    color:rgb(119, 104, 104) ;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color:rgb(84, 71, 71) ;
+}
+
+/* Section and Product List Styling */
+.section1 {
+    margin-top: 4rem;
+    color:rgb(204, 148, 156);
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 2vh 1.5vh;
+    width: 30%;
+    text-align: center;
+    box-sizing: border-box;
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1 1 100px;
+    position: relative;
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.product img:hover {
+    filter: brightness(70%);
+}
+
+.product:nth-child(2) img {
+    max-height: 300px;
+    max-width: 300px;
+}
+
+/* Icon Box Styling */
+.icon-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.icon-box .icon {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.product:hover .icon-box {
+    opacity: 1;
+}
+
+
+footer {
+    background-color:silver ;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+@media (max-width: 991px) {
+    .product-list {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 500px; 
+}
+
+@media (max-width: 480px) { 
+    .product-list {
+        gap: 15px; 
+        padding:10px; 
+}
+}
+    .product {
+        width: 100%; 
+        padding: 15px; 
+    }
+}
